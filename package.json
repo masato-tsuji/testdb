@@ -18,5 +18,9 @@
     "gh-pages": "^6.1.1",
     "sqlite3": "^5.1.7"
   },
-  "homepage": "https://masato-tsuji.github.io/testdb/"
+  "homepage": "https://masato-tsuji.github.io/testdb/",
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  },
+  "build": "webpack --mode production"
 }

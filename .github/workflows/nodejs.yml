@@ -18,14 +18,11 @@ jobs:
         with:
           node-version: '20'  # インストールしたい Node.js のバージョンを指定します
 
-      #- name: Install dependencies
-      #  run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Build
-      #  run: npm run build  # ビルドコマンドを実行します
-
-      - name: start Node.js
-        run: npm start
+      - name: Build
+        run: npm run build  # ビルドコマンドを実行します
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
