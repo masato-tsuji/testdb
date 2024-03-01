@@ -5,12 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "deploy": "gh-pages -d build"
-  },
-  "author": "",
-  "license": "ISC",
-  "volta": {
-    "node": "20.11.1"
+    "deploy": "gh-pages -d build",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "description": "",
@@ -21,6 +17,6 @@
   "homepage": "https://masato-tsuji.github.io/testdb/",
   "devDependencies": {
     "webpack-cli": "^5.1.4"
-  },
-  "build": "webpack --mode production"
+  }
+  
 }
