@@ -18,7 +18,10 @@ const db = new sqlite3.Database("./test.db");
 
 
 db.serialize(() => {
-    db.run("insert into test(name, record) values(?, ?)", "masato", 777);
+    db.run("insert into test(name, record) values(?, ?)", "masato", Math.floor(Math.random() * 1000));
+    db.get("select * from test order by record, rec_date limit 1 offset 4;", (err, row) => {
+        console.log(row.record);
+    });
     db.each("select * from test", (err, row) => {
         console.log(row.id, row.name, row.record, row.rec_date);
     });
