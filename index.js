@@ -22,7 +22,7 @@ db.serialize(() => {
     db.get("select * from test order by record, rec_date limit 1 offset 4;", (err, row) => {
         console.log(row.record);
     });
-    db.each("select * from test", (err, row) => {
+    db.each("select * from test order by record, rec_date", (err, row) => {
         console.log(row.id, row.name, row.record, row.rec_date);
     });
 
